@@ -1,0 +1,180 @@
+<%- include('../partials/head') %>
+<%- include('../partials/navbar') %>
+
+<div class="container">
+  <div class="row justify-content-center my-3">
+    <div class="row col-8 text-center">
+      <h1>Choose your exercises:</h1>
+    </div>
+
+
+  <div class="form-group row col-8 my-3">
+    <form id="newWorkoutForm" action="new-workout/post" method="post">
+      <div class="row fw-bold">
+        <div class="col-2">Progression</div>
+        <div class="col-5">Exercise</div>
+        <div class="col-5">Recommended Exercise</div>
+      </div>
+      <div class="row my-1">
+        <div class="col-2">
+          <label>Pull-up: </label>
+        </div>
+        <div class="col-5">
+          <select class="form-select form-select-sm" name="exercise1">
+            <% for(i=0; i < ex1.length; i++) {%>
+              <option value="<%= ex1[i].id %>">
+                <%= ex1[i].level + " - " + ex1[i].exercise_name %>
+              </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="col-5">
+          <%= recEx1 %>
+        </div>
+      </div>
+      <div class="row my-1">
+        <div class="col-2">
+          <label>Squat: </label>
+        </div>
+        <div class="col-5">
+          <select class="form-select form-select-sm" name="exercise2">
+            <% for(i=0; i < ex2.length; i++) {%>
+              <option value="<%= ex2[i].id %>">
+                <%= ex2[i].level + " - " + ex2[i].exercise_name %>
+              </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="col-5">
+          <%= recEx2 %>
+        </div>
+      </div>
+      <div class="row my-1">
+        <div class="col-2">
+          <label>Dip: </label>
+        </div>
+        <div class="col-5">
+          <select class="form-select form-select-sm" name="exercise3">
+            <% for(i=0; i < ex3.length; i++) {%>
+              <option value="<%= ex3[i].id %>">
+                <%= ex3[i].level + " - " + ex3[i].exercise_name %>
+              </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="col-5">
+          <%= recEx3 %>
+        </div>
+      </div>
+      <div class="row my-1">
+        <div class="col-2">
+          <label>Hinge: </label>
+        </div>
+        <div class="col-5">
+          <select class="form-select form-select-sm" name="exercise4">
+            <% for(i=0; i < ex4.length; i++) {%>
+              <option value="<%= ex4[i].id %>">
+                <%= ex4[i].level + " - " + ex4[i].exercise_name %>
+              </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="col-5">
+          <%= recEx4 %>
+        </div>
+      </div>
+      <div class="row my-1">
+        <div class="col-2">
+          <label>Row: </label>
+        </div>
+        <div class="col-5">
+          <select class="form-select form-select-sm" name="exercise5">
+            <% for(i=0; i < ex5.length; i++) {%>
+              <option value="<%= ex4[i].id %>">
+                <%= ex5[i].level + " - " + ex5[i].exercise_name %>
+              </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="col-5">
+          <%= recEx5 %>
+        </div>
+      </div>
+      <div class="row my-1">
+        <div class="col-2">
+          <label>Push-up: </label>
+        </div>
+        <div class="col-5">
+          <select class="form-select form-select-sm" name="exercise6">
+            <% for(i=0; i < ex6.length; i++) {%>
+              <option value="<%= ex4[i].id %>">
+                <%= ex6[i].level + " - " + ex6[i].exercise_name %>
+              </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="col-5">
+          <%= recEx6 %>
+        </div>
+      </div>
+      <div class="row my-1">
+        <div class="col-2">
+          <label>Anti-Extension: </label>
+        </div>
+        <div class="col-5">
+          <select class="form-select form-select-sm" name="exercise7">
+            <% for(i=0; i < ex7.length; i++) {%>
+              <option value="<%= ex4[i].id %>">
+                <%= ex7[i].level + " - " + ex7[i].exercise_name %>
+              </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="col-5">
+          <%= recEx7 %>
+        </div>
+      </div>
+      <div class="row my-1">
+        <div class="col-2">
+          <label>Anti-Rotation: </label>
+        </div>
+        <div class="col-5">
+          <select class="form-select form-select-sm" name="exercise8">
+            <% for(i=0; i < ex8.length; i++) {%>
+              <option value="<%= ex4[i].id %>">
+                <%= ex8[i].level + " - " + ex8[i].exercise_name %>
+              </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="col-5">
+          <%= recEx8 %>
+        </div>
+      </div>
+      <div class="row my-1">
+        <div class="col-2">
+          <label>Extension: </label>
+        </div>
+        <div class="col-5">
+          <select class="form-select form-select-sm" name="exercise9">
+            <% for(i=0; i < ex9.length; i++) {%>
+              <option value="<%= ex4[i].id %>">
+                <%= ex9[i].level + " - " + ex9[i].exercise_name %>
+              </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="col-5">
+          <%= recEx9 %>
+        </div>
+      </div>
+      <div class="row justify-content-center my-3">
+        <div class="col-5 text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,91 @@
+<%- include('../partials/head') %>
+<%- include('../partials/navbar') %>
+
+<div class="container">
+  <div class="row justify-content-center my-3">
+    <div class="row col-8 text-center">
+      <h1>Have a great workout!</h1>
+    </div>
+
+  <div class="form-group row col-8 my-3">
+    <form id="currentWorkout" action="/home/current-workout/update?_method=PUT" method="POST">
+      <input type="hidden" name="workoutId" value="<%= currentWorkout.id %>" />
+      <div class="row fw-bold">
+        <div class="col-4">Exercise</div>
+        <div class="col-2">Set 1</div>
+        <div class="col-2">Set 2</div>
+        <div class="col-2">Set 3</div>
+        <div class="col-2">Goal</div>
+      </div>
+      <div class="row my-1">
+        <div class="col-4"><a href="<%= currentWorkout.cat1_video %>" target="_blank"><%= currentWorkout.cat1_exercise %></a></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex1_set1" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex1_set2" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex1_set3" /></div>
+        <div class="col-2"><%= currentWorkout.cat1_goal %></div>
+      </div>
+      <div class="row my-1">
+        <div class="col-4"><a href="<%= currentWorkout.cat2_video %>" target="_blank"><%= currentWorkout.cat2_exercise %></a></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex2_set1" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex2_set2" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex2_set3" /></div>
+        <div class="col-2"><%= currentWorkout.cat2_goal %></div>
+      </div>
+      <div class="row my-1">
+        <div class="col-4"><a href="<%= currentWorkout.cat3_video %>" target="_blank"><%= currentWorkout.cat3_exercise %></a></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex3_set1" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex3_set2" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex3_set3" /></div>
+        <div class="col-2"><%= currentWorkout.cat3_goal %></div>
+      </div>
+      <div class="row my-1">
+        <div class="col-4"><a href="<%= currentWorkout.cat4_video %>" target="_blank"><%= currentWorkout.cat4_exercise %></a></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex4_set1" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex4_set2" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex4_set3" /></div>
+        <div class="col-2"><%= currentWorkout.cat4_goal %></div>
+      </div>
+      <div class="row my-1">
+        <div class="col-4"><a href="<%= currentWorkout.cat5_video %>" target="_blank"><%= currentWorkout.cat5_exercise %></a></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex5_set1" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex5_set2" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex5_set3" /></div>
+        <div class="col-2"><%= currentWorkout.cat5_goal %></div>
+      </div>
+      <div class="row my-1">
+        <div class="col-4"><a href="<%= currentWorkout.cat6_video %>" target="_blank"><%= currentWorkout.cat6_exercise %></a></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex6_set1" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex6_set2" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex6_set3" /></div>
+        <div class="col-2"><%= currentWorkout.cat6_goal %></div>
+      </div>
+      <div class="row my-1">
+        <div class="col-4"><a href="<%= currentWorkout.cat7_video %>" target="_blank"><%= currentWorkout.cat7_exercise %></a></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex7_set1" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex7_set2" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex7_set3" /></div>
+        <div class="col-2"><%= currentWorkout.cat7_goal %></div>
+      </div>
+      <div class="row my-1">
+        <div class="col-4"><a href="<%= currentWorkout.cat8_video %>" target="_blank"><%= currentWorkout.cat8_exercise %></a></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex8_set1" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex8_set2" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex8_set3" /></div>
+        <div class="col-2"><%= currentWorkout.cat8_goal %></div>
+      </div>
+      <div class="row my-1">
+        <div class="col-4"><a href="<%= currentWorkout.cat9_video %>" target="_blank"><%= currentWorkout.cat9_exercise %></a></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex9_set1" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex9_set2" /></div>
+        <div class="col-2"><input type="number" class="form-control" name="ex9_set3" /></div>
+        <div class="col-2"><%= currentWorkout.cat9_goal %></div>
+      </div>
+      <div class="row justify-content-center my-3">
+        <div class="col-5 text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</main>

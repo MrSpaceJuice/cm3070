@@ -1,0 +1,91 @@
+<%- include('../partials/head') %>
+<%- include('../partials/navbar') %>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="row col-8 text-center">
+    <h2>Great job on finishing the workout!</h2>
+    </div>
+    
+    <div class="row col-8">
+      <div class="row fw-bold">
+        <div class="col-4">Pair 1</div>
+        <div class="col-1">Set 1</div>
+        <div class="col-1">Set 2</div>
+        <div class="col-1">Set 3</div>
+        <div class="col-5">Recommended Exercise</div>
+      </div>
+      <div class="row">
+        <div class="col-4"><%= lastWorkout.cat1_exercise %></div>
+        <div class="col-1"><%= lastWorkout.ex1_set1 %></div>
+        <div class="col-1"><%= lastWorkout.ex1_set2 %></div>
+        <div class="col-1"><%= lastWorkout.ex1_set3 %></div>
+        <div class="col-5"><%= feedback[0] %></div>
+      </div>
+      <div class="row">
+        <div class="col-4"><%= lastWorkout.cat2_exercise %></div>
+        <div class="col-1"><%= lastWorkout.ex2_set1 %></div>
+        <div class="col-1"><%= lastWorkout.ex2_set2 %></div>
+        <div class="col-1"><%= lastWorkout.ex2_set3 %></div>
+        <div class="col-5"><%= feedback[1] %></div>
+      </div>
+      <div class="row">
+        <div class="col-4"><%= lastWorkout.cat3_exercise %></div>
+        <div class="col-1"><%= lastWorkout.ex3_set1 %></div>
+        <div class="col-1"><%= lastWorkout.ex3_set2 %></div>
+        <div class="col-1"><%= lastWorkout.ex3_set3 %></div>
+        <div class="col-5"><%= feedback[2] %></div>
+      </div>
+      <div class="row">
+        <div class="col-4"><%= lastWorkout.cat4_exercise %></div>
+        <div class="col-1"><%= lastWorkout.ex4_set1 %></div>
+        <div class="col-1"><%= lastWorkout.ex4_set2 %></div>
+        <div class="col-1"><%= lastWorkout.ex4_set3 %></div>
+        <div class="col-5"><%= feedback[3] %></div>
+      </div>
+      <div class="row">
+        <div class="col-4"><%= lastWorkout.cat5_exercise %></div>
+        <div class="col-1"><%= lastWorkout.ex5_set1 %></div>
+        <div class="col-1"><%= lastWorkout.ex5_set2 %></div>
+        <div class="col-1"><%= lastWorkout.ex5_set3 %></div>
+        <div class="col-5"><%= feedback[4] %></div>
+      </div>
+      <div class="row">
+        <div class="col-4"><%= lastWorkout.cat6_exercise %></div>
+        <div class="col-1"><%= lastWorkout.ex6_set1 %></div>
+        <div class="col-1"><%= lastWorkout.ex6_set2 %></div>
+        <div class="col-1"><%= lastWorkout.ex6_set3 %></div>
+        <div class="col-5"><%= feedback[5] %></div>
+      </div>
+      <div class="row">
+        <div class="col-4"><%= lastWorkout.cat7_exercise %></div>
+        <div class="col-1"><%= lastWorkout.ex7_set1 %></div>
+        <div class="col-1"><%= lastWorkout.ex7_set2 %></div>
+        <div class="col-1"><%= lastWorkout.ex7_set3 %></div>
+        <div class="col-5"><%= feedback[6] %></div>
+      </div>
+      <div class="row">
+        <div class="col-4"><%= lastWorkout.cat8_exercise %></div>
+        <div class="col-1"><%= lastWorkout.ex8_set1 %></div>
+        <div class="col-1"><%= lastWorkout.ex8_set2 %></div>
+        <div class="col-1"><%= lastWorkout.ex8_set3 %></div>
+        <div class="col-5"><%= feedback[7] %></div>
+      </div>
+      <div class="row">
+        <div class="col-4"><%= lastWorkout.cat9_exercise %></div>
+        <div class="col-1"><%= lastWorkout.ex9_set1 %></div>
+        <div class="col-1"><%= lastWorkout.ex9_set2 %></div>
+        <div class="col-1"><%= lastWorkout.ex9_set3 %></div>
+        <div class="col-5"><%= feedback[8] %></div>
+      </div>
+
+      <div class="row justify-content-center my-3">
+        <div class="col-5 p-3 text-center">
+          <a href="home/new-workout" class="btn btn-primary" role="button">Start New Workout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

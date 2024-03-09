@@ -1,0 +1,77 @@
+<%- include('../partials/head') %>
+  <%- include('../partials/navbar') %>
+
+<div class="container">
+  <div class="row my-1 justify-content-center">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-moment/1.0.0/chartjs-adapter-moment.min.js"></script> -->
+      <canvas id="myChart" style="width:100%;max-width:800px"></canvas>
+
+      <script>
+      let pchart = new Chart("myChart", {
+          type:'line',
+          data:{
+            labels: <%- JSON.stringify(dates); %>,
+            datasets:[{
+              label:'Pull-up',
+              data: <%- JSON.stringify(ex1Data); %>,
+              fill: false,
+              borderColor: 'rgb(219, 70, 120)'
+            },
+            {
+              label:'Squat',
+              data: <%- JSON.stringify(ex2Data); %>,
+              fill: false,
+              borderColor: 'rgb(23, 154, 196)'
+            },
+            {
+              label:'Dip',
+              data: <%- JSON.stringify(ex3Data); %>,
+              fill: false,
+              borderColor: 'rgb(28, 148, 35)'
+            },
+            {
+              label:'Hinge',
+              data: <%- JSON.stringify(ex4Data); %>,
+              fill: false,
+              borderColor: 'rgb(253, 152, 38)'
+            },
+            {
+              label:'Row',
+              data: <%- JSON.stringify(ex5Data); %>,
+              fill: false,
+              borderColor: 'rgb(102, 17, 0)'
+            },
+            {
+              label:'Push-up',
+              data: <%- JSON.stringify(ex6Data); %>,
+              fill: false,
+              borderColor: 'rgb(51, 34, 136)'
+            },
+            {
+              label:'Anti-Extension',
+              data: <%- JSON.stringify(ex7Data); %>,
+              fill: false,
+              borderColor: 'rgb(191, 151, 119)'
+            },
+            {
+              label:'Anti-Rotation',
+              data: <%- JSON.stringify(ex8Data); %>,
+              fill: false,
+              borderColor: 'rgb(255, 209, 216)'
+            },
+            {
+              label:'Extension',
+              data: <%- JSON.stringify(ex9Data); %>,
+              fill: false,
+              borderColor: 'rgb(244, 100, 21)'
+            }]
+          }
+      })
+      </script>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>
