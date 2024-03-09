@@ -13,6 +13,8 @@ var homeRouter = require("./routes/home");
 
 var db = require("./database").databaseConnection;
 
+app.use(express.static('assets'))
+
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
